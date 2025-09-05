@@ -306,6 +306,390 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Employee Payment Application Styles */
+        .employee-app {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #f5f7fa;
+            z-index: 2000;
+            overflow: hidden;
+        }
+
+        .app-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .back-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .app-content {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+
+        .app-sidebar {
+            width: 250px;
+            background: white;
+            border-right: 1px solid #e1e8ed;
+            padding: 20px 0;
+        }
+
+        .app-nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-item {
+            background: none;
+            border: none;
+            padding: 15px 30px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1em;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .app-main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .app-section {
+            display: none;
+        }
+
+        .app-section.active {
+            display: block;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e1e8ed;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .employees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .employee-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .employee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .employee-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .employee-position {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .employee-details {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .employee-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.8em;
+        }
+
+        .payments-list {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-item {
+            padding: 20px;
+            border-bottom: 1px solid #e1e8ed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .payment-item:last-child {
+            border-bottom: none;
+        }
+
+        .payment-info h4 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .payment-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .payment-amount {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #28a745;
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .report-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .report-card h3 {
+            margin: 0 0 15px 0;
+            color: #666;
+            font-size: 1em;
+        }
+
+        .report-value {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid #e1e8ed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+        }
+
+        .close {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            opacity: 0.7;
+        }
+
+        .form {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e8ed;
+        }
+
+        .payment-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .summary-row.total {
+            border-top: 2px solid #dee2e6;
+            padding-top: 10px;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .app-content {
+                flex-direction: column;
+            }
+            
+            .app-sidebar {
+                width: 100%;
+                height: auto;
+            }
+            
+            .app-nav {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+            
+            .nav-item {
+                white-space: nowrap;
+            }
+            
+            .employees-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -455,7 +839,43 @@
             </div>
         </div>
 
-        <!-- Slide 6: Próximos Pasos -->
+        <!-- Slide 6: Módulo de Pagos de Empleados -->
+        <div class="slide">
+            <h2>Nuevo: Gestión de Pagos de Empleados</h2>
+            <p class="subtitle">Sistema integral para el manejo de nómina y pagos al personal</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>👥 Gestión de Empleados</h4>
+                    <ul>
+                        <li>Registro completo de empleados</li>
+                        <li>Cargos y categorías</li>
+                        <li>Información de contacto</li>
+                        <li>Datos bancarios seguros</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>💰 Cálculo de Pagos</h4>
+                    <ul>
+                        <li>Salarios fijos y por horas</li>
+                        <li>Horas extras y bonificaciones</li>
+                        <li>Descuentos y deducciones</li>
+                        <li>Cálculo automático</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>📊 Reportes y Control</h4>
+                    <ul>
+                        <li>Historial de pagos</li>
+                        <li>Reportes mensuales</li>
+                        <li>Exportación a Excel</li>
+                        <li>Control de costos laborales</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="demo-btn" onclick="showEmployeePaymentApp()">🧑‍💼 Acceder al Sistema de Pagos</button>
+        </div>
+
+        <!-- Slide 7: Próximos Pasos -->
         <div class="slide">
             <h2>Próximos Pasos</h2>
             <div class="steps-container">
@@ -490,7 +910,215 @@
 
     <!-- Contador de slides -->
     <div class="slide-counter">
-        <span id="currentSlide">1</span> / <span id="totalSlides">6</span>
+        <span id="currentSlide">1</span> / <span id="totalSlides">7</span>
+    </div>
+
+    <!-- Employee Payment Application -->
+    <div id="employeePaymentApp" class="employee-app" style="display: none;">
+        <div class="app-header">
+            <h1>💼 Sistema de Pagos de Empleados</h1>
+            <button class="back-btn" onclick="hideEmployeePaymentApp()">← Volver a Presentación</button>
+        </div>
+        
+        <div class="app-content">
+            <div class="app-sidebar">
+                <nav class="app-nav">
+                    <button class="nav-item active" onclick="showSection('employees')">👥 Empleados</button>
+                    <button class="nav-item" onclick="showSection('payments')">💰 Pagos</button>
+                    <button class="nav-item" onclick="showSection('reports')">📊 Reportes</button>
+                </nav>
+            </div>
+            
+            <div class="app-main">
+                <!-- Employees Section -->
+                <div id="employees-section" class="app-section active">
+                    <div class="section-header">
+                        <h2>Gestión de Empleados</h2>
+                        <button class="btn btn-primary" onclick="showEmployeeForm()">+ Agregar Empleado</button>
+                    </div>
+                    
+                    <div class="employees-grid" id="employeesGrid">
+                        <!-- Employee cards will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Payments Section -->
+                <div id="payments-section" class="app-section">
+                    <div class="section-header">
+                        <h2>Registro de Pagos</h2>
+                        <button class="btn btn-primary" onclick="showPaymentForm()">+ Nuevo Pago</button>
+                    </div>
+                    
+                    <div class="payments-list" id="paymentsList">
+                        <!-- Payment records will be populated here -->
+                    </div>
+                </div>
+                
+                <!-- Reports Section -->
+                <div id="reports-section" class="app-section">
+                    <div class="section-header">
+                        <h2>Reportes y Estadísticas</h2>
+                        <button class="btn btn-secondary" onclick="exportReports()">📁 Exportar Excel</button>
+                    </div>
+                    
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <h3>Total Pagado Este Mes</h3>
+                            <div class="report-value" id="monthlyTotal">$0</div>
+                        </div>
+                        <div class="report-card">
+                            <h3>Total Empleados</h3>
+                            <div class="report-value" id="totalEmployees">0</div>
+                        </div>
+                        <div class="report-card">
+                            <h3>Promedio Salarial</h3>
+                            <div class="report-value" id="averageSalary">$0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee Form Modal -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agregar/Editar Empleado</h3>
+                <span class="close" onclick="hideEmployeeForm()">&times;</span>
+            </div>
+            <form id="employeeForm" class="form">
+                <input type="hidden" id="employeeId">
+                
+                <div class="form-group">
+                    <label for="employeeName">Nombre Completo</label>
+                    <input type="text" id="employeeName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employeePosition">Cargo</label>
+                    <select id="employeePosition" required>
+                        <option value="">Seleccionar cargo</option>
+                        <option value="Obrero">Obrero</option>
+                        <option value="Oficial">Oficial</option>
+                        <option value="Capataz">Capataz</option>
+                        <option value="Supervisor">Supervisor</option>
+                        <option value="Ingeniero">Ingeniero</option>
+                        <option value="Administrativo">Administrativo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employeeType">Tipo de Pago</label>
+                    <select id="employeeType" required onchange="toggleSalaryFields()">
+                        <option value="">Seleccionar tipo</option>
+                        <option value="hourly">Por Hora</option>
+                        <option value="monthly">Salario Mensual</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="hourlyRateGroup" style="display: none;">
+                    <label for="hourlyRate">Tarifa por Hora ($)</label>
+                    <input type="number" id="hourlyRate" min="0" step="0.01">
+                </div>
+                
+                <div class="form-group" id="monthlySalaryGroup" style="display: none;">
+                    <label for="monthlySalary">Salario Mensual ($)</label>
+                    <input type="number" id="monthlySalary" min="0" step="0.01">
+                </div>
+                
+                <div class="form-group">
+                    <label for="employeePhone">Teléfono</label>
+                    <input type="tel" id="employeePhone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="employeeEmail">Email</label>
+                    <input type="email" id="employeeEmail">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="hideEmployeeForm()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Form Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Registrar Pago</h3>
+                <span class="close" onclick="hidePaymentForm()">&times;</span>
+            </div>
+            <form id="paymentForm" class="form">
+                <div class="form-group">
+                    <label for="paymentEmployee">Empleado</label>
+                    <select id="paymentEmployee" required>
+                        <option value="">Seleccionar empleado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentPeriod">Período</label>
+                    <input type="month" id="paymentPeriod" required>
+                </div>
+                
+                <div class="form-group" id="hoursWorkedGroup" style="display: none;">
+                    <label for="hoursWorked">Horas Trabajadas</label>
+                    <input type="number" id="hoursWorked" min="0" step="0.5">
+                </div>
+                
+                <div class="form-group" id="overtimeHoursGroup" style="display: none;">
+                    <label for="overtimeHours">Horas Extra</label>
+                    <input type="number" id="overtimeHours" min="0" step="0.5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bonuses">Bonificaciones ($)</label>
+                    <input type="number" id="bonuses" min="0" step="0.01" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="deductions">Descuentos ($)</label>
+                    <input type="number" id="deductions" min="0" step="0.01" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentDate">Fecha de Pago</label>
+                    <input type="date" id="paymentDate" required>
+                </div>
+                
+                <div class="payment-summary">
+                    <div class="summary-row">
+                        <span>Salario Base:</span>
+                        <span id="baseSalary">$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Horas Extra:</span>
+                        <span id="overtimePay">$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Bonificaciones:</span>
+                        <span id="bonusAmount">$0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Descuentos:</span>
+                        <span id="deductionAmount">$0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span><strong>Total a Pagar:</strong></span>
+                        <span id="totalPay"><strong>$0</strong></span>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="hidePaymentForm()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Registrar Pago</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -566,6 +1194,334 @@
                 observer.observe(card);
             });
         });
+
+        // Employee Payment Application Functions
+        let employees = JSON.parse(localStorage.getItem('employees') || '[]');
+        let payments = JSON.parse(localStorage.getItem('payments') || '[]');
+
+        function showEmployeePaymentApp() {
+            document.getElementById('employeePaymentApp').style.display = 'block';
+            loadEmployees();
+            loadPayments();
+            updateReports();
+        }
+
+        function hideEmployeePaymentApp() {
+            document.getElementById('employeePaymentApp').style.display = 'none';
+        }
+
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.app-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from nav items
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName + '-section').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function showEmployeeForm(employeeId = null) {
+            const modal = document.getElementById('employeeModal');
+            const form = document.getElementById('employeeForm');
+            
+            if (employeeId) {
+                const employee = employees.find(emp => emp.id === employeeId);
+                if (employee) {
+                    document.getElementById('employeeId').value = employee.id;
+                    document.getElementById('employeeName').value = employee.name;
+                    document.getElementById('employeePosition').value = employee.position;
+                    document.getElementById('employeeType').value = employee.paymentType;
+                    document.getElementById('hourlyRate').value = employee.hourlyRate || '';
+                    document.getElementById('monthlySalary').value = employee.monthlySalary || '';
+                    document.getElementById('employeePhone').value = employee.phone || '';
+                    document.getElementById('employeeEmail').value = employee.email || '';
+                    toggleSalaryFields();
+                }
+            } else {
+                form.reset();
+                document.getElementById('employeeId').value = '';
+            }
+            
+            modal.style.display = 'block';
+        }
+
+        function hideEmployeeForm() {
+            document.getElementById('employeeModal').style.display = 'none';
+        }
+
+        function toggleSalaryFields() {
+            const type = document.getElementById('employeeType').value;
+            const hourlyGroup = document.getElementById('hourlyRateGroup');
+            const salaryGroup = document.getElementById('monthlySalaryGroup');
+            
+            if (type === 'hourly') {
+                hourlyGroup.style.display = 'block';
+                salaryGroup.style.display = 'none';
+            } else if (type === 'monthly') {
+                hourlyGroup.style.display = 'none';
+                salaryGroup.style.display = 'block';
+            } else {
+                hourlyGroup.style.display = 'none';
+                salaryGroup.style.display = 'none';
+            }
+        }
+
+        function saveEmployee(event) {
+            event.preventDefault();
+            
+            const employeeData = {
+                id: document.getElementById('employeeId').value || Date.now().toString(),
+                name: document.getElementById('employeeName').value,
+                position: document.getElementById('employeePosition').value,
+                paymentType: document.getElementById('employeeType').value,
+                hourlyRate: parseFloat(document.getElementById('hourlyRate').value) || 0,
+                monthlySalary: parseFloat(document.getElementById('monthlySalary').value) || 0,
+                phone: document.getElementById('employeePhone').value,
+                email: document.getElementById('employeeEmail').value,
+                createdAt: new Date().toISOString()
+            };
+            
+            const existingIndex = employees.findIndex(emp => emp.id === employeeData.id);
+            if (existingIndex >= 0) {
+                employees[existingIndex] = employeeData;
+            } else {
+                employees.push(employeeData);
+            }
+            
+            localStorage.setItem('employees', JSON.stringify(employees));
+            loadEmployees();
+            hideEmployeeForm();
+            updateReports();
+        }
+
+        function deleteEmployee(employeeId) {
+            if (confirm('¿Está seguro de que desea eliminar este empleado?')) {
+                employees = employees.filter(emp => emp.id !== employeeId);
+                localStorage.setItem('employees', JSON.stringify(employees));
+                loadEmployees();
+                updateReports();
+            }
+        }
+
+        function loadEmployees() {
+            const grid = document.getElementById('employeesGrid');
+            const paymentSelect = document.getElementById('paymentEmployee');
+            
+            if (employees.length === 0) {
+                grid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No hay empleados registrados. Agregue el primer empleado.</p>';
+            } else {
+                grid.innerHTML = employees.map(employee => `
+                    <div class="employee-card">
+                        <div class="employee-name">${employee.name}</div>
+                        <div class="employee-position">${employee.position}</div>
+                        <div class="employee-details">
+                            <div>Tipo: ${employee.paymentType === 'hourly' ? 'Por Hora' : 'Salario Mensual'}</div>
+                            <div>Tarifa: $${employee.paymentType === 'hourly' ? employee.hourlyRate : employee.monthlySalary} ${employee.paymentType === 'hourly' ? '/hora' : '/mes'}</div>
+                            ${employee.phone ? `<div>Tel: ${employee.phone}</div>` : ''}
+                        </div>
+                        <div class="employee-actions">
+                            <button class="btn btn-primary btn-small" onclick="showEmployeeForm('${employee.id}')">Editar</button>
+                            <button class="btn btn-secondary btn-small" onclick="deleteEmployee('${employee.id}')">Eliminar</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            // Update payment form employee select
+            paymentSelect.innerHTML = '<option value="">Seleccionar empleado</option>' + 
+                employees.map(employee => `<option value="${employee.id}">${employee.name}</option>`).join('');
+        }
+
+        function showPaymentForm() {
+            if (employees.length === 0) {
+                alert('Primero debe agregar empleados antes de registrar pagos.');
+                return;
+            }
+            
+            const modal = document.getElementById('paymentModal');
+            const form = document.getElementById('paymentForm');
+            form.reset();
+            
+            // Set current month
+            const currentDate = new Date();
+            document.getElementById('paymentPeriod').value = currentDate.toISOString().substr(0, 7);
+            document.getElementById('paymentDate').value = currentDate.toISOString().substr(0, 10);
+            
+            modal.style.display = 'block';
+        }
+
+        function hidePaymentForm() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        function updatePaymentCalculation() {
+            const employeeId = document.getElementById('paymentEmployee').value;
+            const hoursWorked = parseFloat(document.getElementById('hoursWorked').value) || 0;
+            const overtimeHours = parseFloat(document.getElementById('overtimeHours').value) || 0;
+            const bonuses = parseFloat(document.getElementById('bonuses').value) || 0;
+            const deductions = parseFloat(document.getElementById('deductions').value) || 0;
+            
+            if (!employeeId) {
+                resetPaymentCalculation();
+                return;
+            }
+            
+            const employee = employees.find(emp => emp.id === employeeId);
+            if (!employee) {
+                resetPaymentCalculation();
+                return;
+            }
+            
+            let baseSalary = 0;
+            let overtimePay = 0;
+            
+            if (employee.paymentType === 'hourly') {
+                baseSalary = hoursWorked * employee.hourlyRate;
+                overtimePay = overtimeHours * employee.hourlyRate * 1.5; // 1.5x for overtime
+                document.getElementById('hoursWorkedGroup').style.display = 'block';
+                document.getElementById('overtimeHoursGroup').style.display = 'block';
+            } else {
+                baseSalary = employee.monthlySalary;
+                document.getElementById('hoursWorkedGroup').style.display = 'none';
+                document.getElementById('overtimeHoursGroup').style.display = 'none';
+            }
+            
+            const totalPay = baseSalary + overtimePay + bonuses - deductions;
+            
+            document.getElementById('baseSalary').textContent = `$${baseSalary.toFixed(2)}`;
+            document.getElementById('overtimePay').textContent = `$${overtimePay.toFixed(2)}`;
+            document.getElementById('bonusAmount').textContent = `$${bonuses.toFixed(2)}`;
+            document.getElementById('deductionAmount').textContent = `$${deductions.toFixed(2)}`;
+            document.getElementById('totalPay').textContent = `$${totalPay.toFixed(2)}`;
+        }
+
+        function resetPaymentCalculation() {
+            document.getElementById('baseSalary').textContent = '$0';
+            document.getElementById('overtimePay').textContent = '$0';
+            document.getElementById('bonusAmount').textContent = '$0';
+            document.getElementById('deductionAmount').textContent = '$0';
+            document.getElementById('totalPay').textContent = '$0';
+        }
+
+        function savePayment(event) {
+            event.preventDefault();
+            
+            const employeeId = document.getElementById('paymentEmployee').value;
+            const employee = employees.find(emp => emp.id === employeeId);
+            
+            const hoursWorked = parseFloat(document.getElementById('hoursWorked').value) || 0;
+            const overtimeHours = parseFloat(document.getElementById('overtimeHours').value) || 0;
+            const bonuses = parseFloat(document.getElementById('bonuses').value) || 0;
+            const deductions = parseFloat(document.getElementById('deductions').value) || 0;
+            
+            let baseSalary = 0;
+            let overtimePay = 0;
+            
+            if (employee.paymentType === 'hourly') {
+                baseSalary = hoursWorked * employee.hourlyRate;
+                overtimePay = overtimeHours * employee.hourlyRate * 1.5;
+            } else {
+                baseSalary = employee.monthlySalary;
+            }
+            
+            const totalPay = baseSalary + overtimePay + bonuses - deductions;
+            
+            const paymentData = {
+                id: Date.now().toString(),
+                employeeId: employeeId,
+                employeeName: employee.name,
+                period: document.getElementById('paymentPeriod').value,
+                hoursWorked: hoursWorked,
+                overtimeHours: overtimeHours,
+                baseSalary: baseSalary,
+                overtimePay: overtimePay,
+                bonuses: bonuses,
+                deductions: deductions,
+                totalPay: totalPay,
+                paymentDate: document.getElementById('paymentDate').value,
+                createdAt: new Date().toISOString()
+            };
+            
+            payments.push(paymentData);
+            localStorage.setItem('payments', JSON.stringify(payments));
+            loadPayments();
+            hidePaymentForm();
+            updateReports();
+        }
+
+        function loadPayments() {
+            const list = document.getElementById('paymentsList');
+            
+            if (payments.length === 0) {
+                list.innerHTML = '<p style="text-align: center; color: #666; padding: 40px;">No hay pagos registrados.</p>';
+            } else {
+                const sortedPayments = payments.sort((a, b) => new Date(b.paymentDate) - new Date(a.paymentDate));
+                list.innerHTML = sortedPayments.map(payment => `
+                    <div class="payment-item">
+                        <div class="payment-info">
+                            <h4>${payment.employeeName}</h4>
+                            <p>Período: ${payment.period} | Fecha: ${new Date(payment.paymentDate).toLocaleDateString()}</p>
+                            ${payment.hoursWorked > 0 ? `<p>Horas: ${payment.hoursWorked} + ${payment.overtimeHours} extra</p>` : ''}
+                        </div>
+                        <div class="payment-amount">$${payment.totalPay.toFixed(2)}</div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function updateReports() {
+            const currentMonth = new Date().toISOString().substr(0, 7);
+            const monthlyPayments = payments.filter(p => p.period === currentMonth);
+            const monthlyTotal = monthlyPayments.reduce((sum, p) => sum + p.totalPay, 0);
+            
+            const totalEmployees = employees.length;
+            const averageSalary = employees.length > 0 ? 
+                employees.reduce((sum, emp) => sum + (emp.paymentType === 'hourly' ? emp.hourlyRate * 160 : emp.monthlySalary), 0) / employees.length : 0;
+            
+            document.getElementById('monthlyTotal').textContent = `$${monthlyTotal.toFixed(2)}`;
+            document.getElementById('totalEmployees').textContent = totalEmployees;
+            document.getElementById('averageSalary').textContent = `$${averageSalary.toFixed(2)}`;
+        }
+
+        function exportReports() {
+            if (payments.length === 0) {
+                alert('No hay datos para exportar.');
+                return;
+            }
+            
+            // Create CSV content
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "Empleado,Período,Fecha de Pago,Horas Trabajadas,Horas Extra,Salario Base,Pago Horas Extra,Bonificaciones,Descuentos,Total\n";
+            
+            payments.forEach(payment => {
+                csvContent += `"${payment.employeeName}","${payment.period}","${payment.paymentDate}",${payment.hoursWorked},${payment.overtimeHours},${payment.baseSalary.toFixed(2)},${payment.overtimePay.toFixed(2)},${payment.bonuses.toFixed(2)},${payment.deductions.toFixed(2)},${payment.totalPay.toFixed(2)}\n`;
+            });
+            
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `reporte_pagos_${new Date().toISOString().substr(0, 10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Event listeners for payment form
+        document.getElementById('employeeForm').addEventListener('submit', saveEmployee);
+        document.getElementById('paymentForm').addEventListener('submit', savePayment);
+        
+        // Event listeners for payment calculation
+        document.getElementById('paymentEmployee').addEventListener('change', updatePaymentCalculation);
+        document.getElementById('hoursWorked').addEventListener('input', updatePaymentCalculation);
+        document.getElementById('overtimeHours').addEventListener('input', updatePaymentCalculation);
+        document.getElementById('bonuses').addEventListener('input', updatePaymentCalculation);
+        document.getElementById('deductions').addEventListener('input', updatePaymentCalculation);
     </script>
 </body>
 </html>
